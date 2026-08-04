@@ -1,0 +1,6 @@
+# Ignore large Android release binaries in git push
+*.apk
+*.aab
+*.jks
+node_modules/
+.DS_Store

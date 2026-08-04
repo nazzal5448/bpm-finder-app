@@ -1,0 +1,27 @@
+name: bpm-finder-app
+title: BPM Finder App
+version: 1.0.0
+summary: Find song tempo, count tap BPM, and compute delay note divisions.
+description: |
+  BPM Finder App desktop CLI and audio tempo utility for Ubuntu and Linux.
+  Calculate beats per minute, tap tempo intervals, and delay/reverb timing values.
+  Powered by the BPM Finder App (https://bpmfinderapp.com).
+license: MIT
+architectures:
+- amd64
+base: core22
+apps:
+  bpm-finder-app:
+    command: bin/bpm-finder-app
+confinement: strict
+grade: stable
+environment:
+  LD_LIBRARY_PATH: ${SNAP_LIBRARY_PATH}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+  PATH: $SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH
+links:
+  contact:
+  - support@bpmfinderapp.com
+  source-code:
+  - https://github.com/nazzal5448/bpm-finder-app
+  website:
+  - https://bpmfinderapp.com

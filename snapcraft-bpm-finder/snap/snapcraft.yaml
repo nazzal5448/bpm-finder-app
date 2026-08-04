@@ -1,0 +1,36 @@
+name: bpm-finder-app
+title: BPM Finder App
+version: '1.0.0'
+summary: Fast audio tempo detection, tap BPM counter, and delay timing calculator.
+description: |
+  BPM Finder App is the ultimate Linux desktop CLI and audio tempo utility built for DJs, music producers, sound engineers, and musicians.
+
+  Features:
+  * Instant Tempo Calculation: Measure song tempo (BPM) and average tap interval timings directly from your terminal.
+  * Tap Tempo Counter: Tap along with any rhythm to calculate beats per minute in real time.
+  * Delay Division Calculator: Compute precise milliseconds for quarter (1/4), eighth (1/8), dotted eighth (1/8d), triplet, and sixteenth (1/16) note delay divisions.
+  * Reverb Pre-Delay Recommendations: Calculate tight, natural, and spacious pre-delay values for audio mixing in your DAW.
+  * Zero Upload Privacy: All audio analysis calculations run 100% locally on your Linux machine with zero server uploads.
+
+  Powered by the BPM Finder App (https://bpmfinderapp.com).
+
+base: core22
+grade: stable
+confinement: strict
+
+license: MIT
+contact: support@bpmfinderapp.com
+website: https://bpmfinderapp.com
+source-code: https://github.com/nazzal5448/bpm-finder-app
+
+apps:
+  bpm-finder-app:
+    command: bin/bpm-finder-app
+
+parts:
+  bpm-finder-app:
+    plugin: dump
+    source: .
+    override-build: |
+      chmod -R 755 bin/
+      craftctl default

@@ -1,0 +1,22 @@
+{
+  "name": "bpm-finder/app",
+  "description": "PHP SDK for audio tempo calculation, Tap BPM interval analysis, delay note divisions, and reverb pre-delay formulas. Powered by the BPM Finder App.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://bpmfinderapp.com",
+  "authors": [
+    {
+      "name": "John Goldberg",
+      "email": "support@bpmfinderapp.com",
+      "homepage": "https://bpmfinderapp.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "BpmFinder\\": "php-bpm-finder/src/"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[package]
+name = "bpm-finder-app"
+version = "1.0.0"
+edition = "2021"
+authors = ["John Goldberg <support@bpmfinderapp.com>"]
+description = "High-performance Rust crate for audio tempo calculation, Tap BPM interval analysis, and delay/reverb timing math. Powered by the BPM Finder App."
+license = "MIT"
+homepage = "https://bpmfinderapp.com"
+repository = "https://github.com/nazzal5448/bpm-finder-app"
+documentation = "https://docs.rs/bpm-finder"
+readme = "README.md"
+keywords = ["bpm", "tempo", "audio", "music", "metronome"]
+categories = ["multimedia::audio"]
+
+[dependencies]

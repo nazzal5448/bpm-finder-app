@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>bpm-finder-app</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/nazzal5448/bpm-finder-app</packageSourceUrl>
+    <owners>bpmfinderapp</owners>
+    <title>BPM Finder App (Portable)</title>
+    <authors>BPM Finder Team</authors>
+    <projectUrl>https://bpmfinderapp.com</projectUrl>
+    <iconUrl>https://bpmfinderapp.com/favicon.ico</iconUrl>
+    <copyright>2026 BPM Finder App</copyright>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/nazzal5448/bpm-finder-app</projectSourceUrl>
+    <docsUrl>https://bpmfinderapp.com/blog</docsUrl>
+    <bugTrackerUrl>https://github.com/nazzal5448/bpm-finder-app/issues</bugTrackerUrl>
+    <tags>bpm metronome audio tempo delay reverb music production flutter</tags>
+    <summary>Calculate BPM tempos, tap intervals, delay note divisions, and reverb pre-delay values.</summary>
+    <description>
+BPM Finder App is an audio tempo detection tool, interactive tap metronome, and delay note division calculator built for music producers, DJs, and audio engineers.
+    </description>
+    <releaseNotes>Initial 1.0.0 release.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

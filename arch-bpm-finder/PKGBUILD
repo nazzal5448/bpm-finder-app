@@ -1,0 +1,17 @@
+# Maintainer: BPM Finder Team <support@bpmfinderapp.com>
+pkgname=bpm-finder-app
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Audio tempo detection, tap BPM counter, and delay note timing calculator"
+arch=('x86_64' 'aarch64')
+url="https://bpmfinderapp.com"
+license=('MIT')
+depends=()
+source=("https://github.com/nazzal5448/bpm-finder-app/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+    cd "${srcdir}/bpm-finder-app-${pkgver}"
+    install -Dm755 snapcraft-bpm-finder/bin/bpm-finder-app "${pkgdir}/usr/bin/bpm-finder-app"
+    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

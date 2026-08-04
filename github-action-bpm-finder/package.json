@@ -1,0 +1,19 @@
+{
+  "name": "github-action-bpm-finder",
+  "version": "1.0.0",
+  "description": "Calculate song BPM tempos and audio delay timing in GitHub Actions.",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.1"
+  },
+  "keywords": [
+    "bpm",
+    "audio",
+    "tempo",
+    "github-actions",
+    "music-production"
+  ],
+  "author": "BPM Finder Team",
+  "license": "MIT",
+  "homepage": "https://bpmfinderapp.com"
+}

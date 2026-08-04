@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPM Finder App - Hugging Face Space</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #111827;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #8b5cf6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 2rem 1rem; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+    .container { max-width: 800px; width: 100%; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; text-align: center; }
+    h1 { font-size: 2rem; font-weight: 800; background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+    p.subtitle { color: var(--text-muted); font-size: 0.95rem; }
+    .card { background-color: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    
+    /* Tap Button */
+    .tap-area { text-align: center; padding: 1.5rem; }
+    .tap-btn { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; border-radius: 50%; width: 140px; height: 140px; font-size: 1.25rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.1s; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4); user-select: none; }
+    .tap-btn:active { transform: scale(0.94); }
+    .bpm-display { font-size: 3rem; font-weight: 900; color: #60a5fa; margin-top: 1rem; }
+    .bpm-meta { color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem; }
+    
+    /* Table */
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
+    td code { background: rgba(255,255,255,0.06); padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color: #93c5fd; }
+    
+    /* Input */
+    input[type="number"] { background: var(--bg); border: 1px solid var(--border); color: white; padding: 0.6rem 1rem; border-radius: 6px; width: 100%; max-width: 200px; font-size: 1rem; }
+    
+    /* Footer */
+    footer { text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.85rem; }
+    footer a { color: #60a5fa; text-decoration: none; font-weight: 600; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎵 BPM Finder App</h1>
+      <p class="subtitle">Official Hugging Face Space for <a href="https://bpmfinderapp.com" target="_blank" style="color:#60a5fa;">bpmfinderapp.com</a></p>
+    </header>
+
+    <!-- Tap BPM Section -->
+    <div class="card">
+      <div class="card-title"><span>⏱️</span> Interactive Tap Tempo Counter</div>
+      <div class="tap-area">
+        <button class="tap-btn" id="tapBtn">TAP BEAT<br><span style="font-size:0.75rem; font-weight:normal;">or Spacebar</span></button>
+        <div class="bpm-display" id="bpmVal">--</div>
+        <div class="bpm-meta" id="bpmMeta">Tap at least 2 times along with rhythm</div>
+      </div>
+    </div>
+
+    <!-- Delay Calculator Section -->
+    <div class="card">
+      <div class="card-title"><span>🎛️</span> Audio Delay Note Calculator</div>
+      <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem;">
+        <label for="bpmInput" style="font-size:0.9rem; color:var(--text-muted);">Enter BPM:</label>
+        <input type="number" id="bpmInput" value="120" min="20" max="300">
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Note Division</th>
+            <th>Delay Duration (ms)</th>
+            <th>Frequency (Hz)</th>
+          </tr>
+        </thead>
+        <tbody id="delayTableBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      Powered by the 100% private, local DSP engine of <a href="https://bpmfinderapp.com" target="_blank">BPM Finder App</a>.
+    </footer>
+  </div>
+
+  <script>
+    // Tap BPM Logic
+    let taps = [];
+    const tapBtn = document.getElementById('tapBtn');
+    const bpmVal = document.getElementById('bpmVal');
+    const bpmMeta = document.getElementById('bpmMeta');
+    const bpmInput = document.getElementById('bpmInput');
+    const delayTableBody = document.getElementById('delayTableBody');
+
+    function handleTap() {
+      const now = performance.now();
+      if (taps.length > 0 && now - taps[taps.length - 1] > 3000) {
+        taps = [];
+      }
+      taps.push(now);
+      if (taps.length >= 2) {
+        let totalInterval = 0;
+        for (let i = 1; i < taps.length; i++) {
+          totalInterval += (taps[i] - taps[i - 1]);
+        }
+        const avgInterval = totalInterval / (taps.length - 1);
+        const calculatedBpm = Math.round(60000 / avgInterval);
+        bpmVal.textContent = calculatedBpm;
+        bpmMeta.textContent = `Taps: ${taps.length} | Avg Interval: ${Math.round(avgInterval)}ms`;
+        bpmInput.value = calculatedBpm;
+        updateDelayTable(calculatedBpm);
+      } else {
+        bpmMeta.textContent = 'Keep tapping...';
+      }
+    }
+
+    tapBtn.addEventListener('click', handleTap);
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && document.activeElement !== bpmInput) {
+        e.preventDefault();
+        handleTap();
+      }
+    });
+
+    function updateDelayTable(bpm) {
+      if (!bpm || bpm <= 0) return;
+      const qMs = 60000 / bpm;
+      const divisions = [
+        { name: '1/4 (Quarter Note)', ms: qMs },
+        { name: '1/8 (Eighth Note)', ms: qMs / 2 },
+        { name: '1/8d (Dotted Eighth)', ms: (qMs / 2) * 1.5 },
+        { name: '1/16 (Sixteenth Note)', ms: qMs / 4 },
+        { name: '1/8 Triplet', ms: qMs / 3 }
+      ];
+      delayTableBody.innerHTML = divisions.map(d => `
+        <tr>
+          <td><strong>${d.name}</strong></td>
+          <td><code>${d.ms.toFixed(2)} ms</code></td>
+          <td><code>${(1000 / d.ms).toFixed(2)} Hz</code></td>
+        </tr>
+      `).join('');
+    }
+
+    bpmInput.addEventListener('input', (e) => {
+      const val = parseFloat(e.target.value);
+      if (val > 0) updateDelayTable(val);
+    });
+
+    // Initialize with default 120 BPM
+    updateDelayTable(120);
+  </script>
+</body>
+</html>

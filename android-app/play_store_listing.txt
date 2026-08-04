@@ -1,0 +1,33 @@
+===================================================================
+BPM FINDER APP - PLAY STORE & APP STORE LISTING METADATA
+===================================================================
+
+-------------------------------------------------------------------
+SHORT DESCRIPTION (Max 80 Characters)
+-------------------------------------------------------------------
+Find song BPM, detect musical key, tap tempo, and calculate delay reverb timing.
+
+
+-------------------------------------------------------------------
+LONG DESCRIPTION (SEO Optimized)
+-------------------------------------------------------------------
+BPM Finder App is the ultimate tempo detection and music production utility built for DJs, producers, musicians, sound engineers, and songwriters. Whether you are mixing tracks live, practicing with a metronome, or configuring delay note divisions in your Digital Audio Workstation, BPM Finder App provides instant audio tempo calculations with professional accuracy.
+
+With advanced real-time beat analysis, BPM Finder App lets you analyze audio files (MP3, WAV, AAC) or use your device microphone to detect song tempo and musical key on the fly. The built-in tap BPM counter allows you to tap along to any rhythm to calculate precise beats per minute and average tap interval stats.
+
+BPM Finder App also includes an interactive tap metronome with customizable time signatures (2/4, 3/4, 4/4, 6/8) and a delay and reverb timing calculator. Compute exact quarter note, eighth note, dotted eighth, triplet, and sixteenth note delay times alongside optimal reverb pre-delay values for clean studio mixes. Designed with a clean light mode aesthetic, zero bloat, and fast local processing, BPM Finder App is your essential music production companion.
+
+
+-------------------------------------------------------------------
+10 FEATURE BULLETS (Single Line Each)
+-------------------------------------------------------------------
+1. Tap BPM Counter: Tap along to any song rhythm to measure exact beats per minute instantly.
+2. Audio File Tempo Analyzer: Upload MP3, WAV, or AAC tracks to detect song BPM and musical key.
+3. Live Microphone Beat Detector: Analyze live acoustic audio or ambient room playback in real time.
+4. Interactive Tap Metronome: Practice timing with adjustable 30 to 300 BPM speed and audio click feedback.
+5. Time Signature Selector: Switch seamlessly between 2/4, 3/4, 4/4, and 6/8 metronome time signatures.
+6. Visual Beat Indicator: Track measure position with high contrast beat lights and accent pulse.
+7. Delay Timing Calculator: Calculate exact quarter, eighth, dotted eighth, triplet, and sixteenth note delay milliseconds.
+8. Reverb Pre-Delay Settings: Compute tight, natural, and spacious reverb pre-delay times for audio mixing.
+9. Real-Time Waveform Visualizer: Monitor live audio input signal and tempo analysis confidence scores.
+10. Fast Local Processing: Enjoy lightweight, secure, and responsive offline performance with zero audio uploads.

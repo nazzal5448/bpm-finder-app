@@ -1,0 +1,21 @@
+name: 'BPM Finder Action'
+description: 'Calculate audio song tempo (BPM), beat tap intervals, and delay/reverb timing divisions in GitHub Actions.'
+author: 'BPM Finder Team'
+branding:
+  icon: 'music'
+  color: 'blue'
+inputs:
+  bpm:
+    description: 'Target BPM tempo to calculate delay divisions for'
+    required: false
+    default: '120'
+outputs:
+  quarter_note_ms:
+    description: '1/4 Quarter Note delay time in milliseconds'
+  eighth_note_ms:
+    description: '1/8 Eighth Note delay time in milliseconds'
+  sixteenth_note_ms:
+    description: '1/16 Sixteenth Note delay time in milliseconds'
+runs:
+  using: 'node20'
+  main: 'index.js'

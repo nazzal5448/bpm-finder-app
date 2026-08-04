@@ -1,0 +1,36 @@
+===================================================================
+BPM FINDER APP - BROWSER EXTENSION STORE LISTING METADATA
+===================================================================
+
+-------------------------------------------------------------------
+SHORT DESCRIPTION (Max 132 Characters)
+-------------------------------------------------------------------
+Find song tempo and tap BPM instantly in your browser toolbar with precision beat matching and timing calculators.
+
+
+-------------------------------------------------------------------
+LONG DESCRIPTION (SEO Optimized)
+-------------------------------------------------------------------
+BPM Finder App for browser extensions is a lightweight popup utility designed for music producers, DJs, audio engineers, and musicians. Count song tempo, measure tap intervals, and calculate delay note divisions directly from your Chrome, Firefox, or Edge browser toolbar.
+
+Features:
+* Instant Tap Tempo Counter: Click the tap button or press the Spacebar along to any playing song to calculate precise beats per minute (BPM) in real time.
+* Real-Time Tempo Categorization: Automatically classifies song tempos across musical ranges including Slow, Moderate, Upbeat, Fast, and Ultra Fast.
+* Tap Statistics Tracker: View your total tap count and current rhythm tempo stability.
+* Lightweight & Fast: Opens instantly in a compact popup window without slowing down your browser.
+* Privacy-First Design: Runs 100% locally inside your browser with zero data collection and zero tracking.
+
+Powered by the BPM Finder App (https://bpmfinderapp.com).
+
+
+-------------------------------------------------------------------
+PERMISSION JUSTIFICATIONS
+-------------------------------------------------------------------
+1. permissions: []
+   * No sensitive browser APIs or user data permissions are requested (no storage, tabs, activeTab, cookies, or webRequest required).
+
+2. host_permissions: ["*://*.bpmfinderapp.com/*"]
+   * Justification: Allows the extension popup link to safely open the official BPM Finder App website (https://bpmfinderapp.com) in a new browser tab when clicked by the user.
+
+3. data_collection_permissions: { "required": ["none"] }
+   * Justification: Confirms that zero user data, personal info, or browsing activity is collected or transmitted by this extension.
