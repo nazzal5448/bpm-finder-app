@@ -1,0 +1,45 @@
+====================================================================
+ALTERNATIVETO SOFTWARE SUBMISSION DETAILS (DA 85)
+Submission Form URL: https://alternativeto.net/software/add/
+====================================================================
+
+1. APPLICATION NAME:
+BPM Finder App
+
+2. OFFICIAL WEBSITE URL:
+https://bpmfinderapp.com
+
+3. TAGLINE / SHORT DESCRIPTION:
+Free online audio tempo (BPM) detector, tap metronome, and audio delay note division calculator.
+
+4. FULL DESCRIPTION:
+BPM Finder App is a browser-based audio tempo detection suite and interactive tap metronome designed for music producers, DJs, audio engineers, and sound designers.
+
+Key Features:
+- Real-time Audio Tempo (BPM) Detection: Analyze song files to compute exact tempo and beat intervals.
+- Interactive Tap Metronome: Count tempo in real time by clicking or tapping Spacebar.
+- Audio Delay & Reverb Calculator: Instant millisecond timing for 1/4, 1/8, 1/8d, 1/16, and triplet delay divisions.
+- 100% Private Local Execution: WebAudio and WASM DSP calculations process locally inside your browser with zero data collection or server uploads.
+
+5. LICENSE / PRICE:
+Free / Open Source (MIT License)
+
+6. PLATFORMS:
+- Web / Browser-based
+- Windows
+- macOS
+- Linux
+- Android
+- iOS
+- Browser Extension (Chrome, Firefox, Edge)
+
+7. CATEGORIES & TAGS:
+Audio & Music, Music Production, Metronome, Tempo Calculator, DJ Tools, Audio DSP, DAW Utilities
+
+8. ALTERNATIVE TO (SIMILAR SOFTWARE):
+- Tunebat
+- SongBPM
+- Vocal Remover
+- TapTempo
+- Ableton Live Metronome
+====================================================================

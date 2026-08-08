@@ -1,0 +1,24 @@
+name: Snapcraft Build & Publish
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  snap:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Snap Package
+        id: build
+        uses: snapcore/action-build@v1
+        with:
+          path: snapcraft-bpm-finder
+      - name: Publish Snap Package
+        uses: snapcore/action-publish@v1
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_TOKEN }}
+        with:
+          snap: ${{ steps.build.outputs.snap }}
+          release: stable

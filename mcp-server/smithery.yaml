@@ -1,0 +1,6 @@
+# Smithery AI configuration for BPM Finder MCP Server
+runtime: node
+entrypoint: index.js
+name: bpm-finder-mcp
+title: BPM Finder MCP Server
+description: Model Context Protocol (MCP) tools for AI agents to calculate song BPM, tap tempo intervals, and delay/reverb timing formulas. Powered by the BPM Finder App (https://bpmfinderapp.com).

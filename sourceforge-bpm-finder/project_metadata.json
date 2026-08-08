@@ -1,0 +1,26 @@
+{
+  "name": "BPM Finder App",
+  "unix_name": "bpm-finder-app",
+  "homepage": "https://bpmfinderapp.com",
+  "short_description": "Calculate audio song tempo (BPM), tap beat intervals, and audio delay note divisions online.",
+  "full_description": "BPM Finder App is a professional audio tempo detection tool, interactive tap metronome, and delay/reverb timing calculator built for music producers, DJs, audio engineers, and musicians.\n\nKey Features:\n- Audio Tempo Detection: Compute exact song BPM and average beat intervals.\n- Tap Tempo Metronome: Tap along to any rhythm using your mouse or Spacebar.\n- Delay & Reverb Note Calculator: Instant millisecond calculations for 1/4, 1/8, 1/8d, 1/16, and triplet delay divisions.\n- 100% Local Privacy: All audio DSP calculations run locally inside your browser via WebAudio/WASM with zero server uploads.\n\nVisit official web app: https://bpmfinderapp.com",
+  "categories": [
+    "Audio & Video",
+    "Music",
+    "Multimedia",
+    "Utilities"
+  ],
+  "keywords": [
+    "bpm-finder",
+    "tempo-calculator",
+    "tap-bpm",
+    "metronome",
+    "delay-calculator",
+    "reverb-timing",
+    "audio-dsp",
+    "music-production"
+  ],
+  "license": "MIT License",
+  "developer": "BPM Finder Team",
+  "project_url": "https://sourceforge.net/projects/bpm-finder-app/"
+}

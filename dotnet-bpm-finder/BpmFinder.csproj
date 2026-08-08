@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0;netstandard2.0</TargetFrameworks>
+    <PackageId>bpm-finder-app</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>John Goldberg</Authors>
+    <Company>BPM Finder</Company>
+    <Description>.NET library for C# / F# audio tempo calculation, Tap BPM interval analysis, and delay/reverb timing math. Powered by the BPM Finder App.</Description>
+    <PackageProjectUrl>https://bpmfinderapp.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nazzal5448/bpm-finder-app</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>bpm;tempo;audio;music;metronome;delay-calculator</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

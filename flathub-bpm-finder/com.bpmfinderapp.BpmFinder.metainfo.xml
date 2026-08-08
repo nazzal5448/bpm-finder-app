@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.bpmfinderapp.BpmFinder</id>
+  <name>BPM Finder App</name>
+  <summary>Audio song tempo (BPM) detector, tap metronome, and delay timing calculator</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <developer_name>BPM Finder Team</developer_name>
+  <url type="homepage">https://bpmfinderapp.com</url>
+  <url type="bugtracker">https://github.com/nazzal5448/bpm-finder-app/issues</url>
+  <url type="help">https://bpmfinderapp.com/blog</url>
+  <description>
+    <p>
+      BPM Finder App is an audio tempo detection suite, interactive tap tempo metronome, and audio delay note division calculator built for music producers, DJs, audio engineers, and sound designers.
+    </p>
+    <ul>
+      <li>Audio Tempo Detection: Compute song BPM and average beat intervals.</li>
+      <li>Interactive Tap Metronome: Count tempo in real time using mouse click or Spacebar.</li>
+      <li>Delay &amp; Reverb Note Calculator: Compute millisecond values for 1/4, 1/8, 1/8d, 1/16, and triplet delay divisions.</li>
+      <li>100% Local Privacy: All Web Audio DSP calculations run 100% locally inside your browser with zero data uploads.</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">com.bpmfinderapp.BpmFinder.desktop</launchable>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Audio</category>
+    <category>Music</category>
+  </categories>
+  <releases>
+    <release version="1.0.0" date="2026-08-04" />
+  </releases>
+</component>

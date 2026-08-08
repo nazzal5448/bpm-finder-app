@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo "BPM Finder App CLI v1.0.0"
+echo "Official Web Application: https://bpmfinderapp.com"
+echo "NPM Package: npm i bpm-finder-app"

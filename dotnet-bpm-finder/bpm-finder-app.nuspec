@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>bpm-finder-app</id>
+    <version>1.0.0</version>
+    <title>BPM Finder App</title>
+    <authors>John Goldberg</authors>
+    <owners>BPM Finder</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://bpmfinderapp.com</projectUrl>
+    <description>.NET library for C# / F# audio tempo calculation, Tap BPM interval analysis, and delay/reverb timing math. Powered by the BPM Finder App.</description>
+    <tags>bpm tempo audio music metronome delay-calculator</tags>
+    <repository type="git" url="https://github.com/nazzal5448/bpm-finder-app" />
+    <readme>README.md</readme>
+  </metadata>
+</package>

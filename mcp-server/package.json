@@ -1,0 +1,29 @@
+{
+  "name": "bpm-finder-app-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for local audio tempo calculation, Tap BPM interval analysis, and delay/reverb timing formulas. Powered by the BPM Finder App.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "bpm-finder-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1"
+  },
+  "keywords": [
+    "mcp",
+    "smithery",
+    "bpm-finder",
+    "bpm-finder-app",
+    "bpm",
+    "tempo",
+    "audio",
+    "music"
+  ],
+  "author": "John Goldberg <support@bpmfinderapp.com>",
+  "license": "MIT",
+  "homepage": "https://bpmfinderapp.com"
+}

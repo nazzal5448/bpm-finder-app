@@ -1,0 +1,29 @@
+{
+  "name": "bpm-finder-app",
+  "version": "1.0.0",
+  "description": "High-precision TypeScript & JavaScript SDK for audio tempo detection, Tap BPM counting, delay note divisions, and reverb pre-delay formulas. Powered by the BPM Finder App.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "bpm-finder",
+    "bpm-finder-app",
+    "bpm",
+    "tempo",
+    "tap-bpm",
+    "metronome",
+    "delay-calculator",
+    "reverb-predelay",
+    "audio",
+    "music-production"
+  ],
+  "author": "John Goldberg <support@bpmfinderapp.com>",
+  "license": "MIT",
+  "homepage": "https://bpmfinderapp.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazzal5448/bpm-finder-app.git"
+  }
+}

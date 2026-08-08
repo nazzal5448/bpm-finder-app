@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPM Finder - Tap Tempo</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div className="container">
+    <header className="header">
+      <div className="title-row">
+        <span className="logo-badge">BPM</span>
+        <h1 className="title">BPM Finder</h1>
+      </div>
+      <p className="subtitle">Tap along to find song tempo</p>
+    </header>
+
+    <main className="main">
+      <div className="bpm-display-card">
+        <div id="bpmValue" className="bpm-number">--</div>
+        <div className="bpm-unit">BEATS PER MINUTE</div>
+        <div id="bpmStatus" className="bpm-status">Tap the beat or press Spacebar</div>
+      </div>
+
+      <button id="tapBtn" className="tap-btn">
+        <span className="tap-text">TAP BEAT</span>
+        <span className="tap-hint">Click or press Space</span>
+      </button>
+
+      <div className="stats-grid">
+        <div className="stat-box">
+          <span className="stat-label">TAPS</span>
+          <span id="tapCount" className="stat-val">0</span>
+        </div>
+        <div className="stat-box">
+          <span className="stat-label">TEMPO</span>
+          <span id="tempoCategory" className="stat-val">--</span>
+        </div>
+      </div>
+
+      <div className="actions-row">
+        <button id="resetBtn" className="secondary-btn">Reset</button>
+        <a href="https://bpmfinderapp.com" target="_blank" className="link-btn">BPM Finder App &rarr;</a>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+app-id: com.bpmfinderapp.BpmFinder
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: bpm-finder-app
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=dri
+modules:
+  - name: bpm-finder-app
+    buildsystem: simple
+    build-commands:
+      - install -D -m 755 snapcraft-bpm-finder/bin/bpm-finder-app /app/bin/bpm-finder-app
+      - install -D -m 644 com.bpmfinderapp.BpmFinder.metainfo.xml /app/share/metainfo/com.bpmfinderapp.BpmFinder.metainfo.xml
+    sources:
+      - type: archive
+        url: https://github.com/nazzal5448/bpm-finder-app/archive/refs/tags/v1.0.0.tar.gz
+        sha256: 12887f0211b6d9582575cb020c29cbfe9f3dc5a2ca9f5aee9acacd0e4235929e

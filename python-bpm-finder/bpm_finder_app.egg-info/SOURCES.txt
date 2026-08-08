@@ -1,0 +1,7 @@
+README.md
+setup.py
+bpm_finder/__init__.py
+bpm_finder_app.egg-info/PKG-INFO
+bpm_finder_app.egg-info/SOURCES.txt
+bpm_finder_app.egg-info/dependency_links.txt
+bpm_finder_app.egg-info/top_level.txt
